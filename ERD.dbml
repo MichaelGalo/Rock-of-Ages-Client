@@ -1,0 +1,20 @@
+Table User {
+  id int pk
+  first_name varchar
+  last_name varchar
+  email varchar
+  username varchar
+}
+
+Table Rock {
+  id int pk
+  name varchar
+  weight decimal
+  type int [ref: > Type.id]
+  user int [ref: > User.id]
+}
+
+Table Type {
+  id int pk
+  label varchar
+}
